@@ -1,31 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32228.430
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScriptingMono", "ScriptingMono\ScriptingMono.vcxproj", "{60722B17-E362-4B5D-A4E7-380071262BA2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScriptingMono", "ScriptingMono\ScriptingMono.vcxproj", "{91067BC1-FDC6-F6F7-C601-407532813BD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test-ScriptingCore", "Test-ScriptingCore\Test-ScriptingCore.csproj", "{6EC8E2A4-5AAC-A3FA-C30C-9E4DAF0F8E7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Debug|x64.ActiveCfg = Debug|x64
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Debug|x64.Build.0 = Debug|x64
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Debug|x86.ActiveCfg = Debug|Win32
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Debug|x86.Build.0 = Debug|Win32
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Release|x64.ActiveCfg = Release|x64
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Release|x64.Build.0 = Release|x64
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Release|x86.ActiveCfg = Release|Win32
-		{60722B17-E362-4B5D-A4E7-380071262BA2}.Release|x86.Build.0 = Release|Win32
+		{91067BC1-FDC6-F6F7-C601-407532813BD4}.Debug|x64.ActiveCfg = Debug|x64
+		{91067BC1-FDC6-F6F7-C601-407532813BD4}.Debug|x64.Build.0 = Debug|x64
+		{91067BC1-FDC6-F6F7-C601-407532813BD4}.Release|x64.ActiveCfg = Release|x64
+		{91067BC1-FDC6-F6F7-C601-407532813BD4}.Release|x64.Build.0 = Release|x64
+		{6EC8E2A4-5AAC-A3FA-C30C-9E4DAF0F8E7C}.Debug|x64.ActiveCfg = Debug|x64
+		{6EC8E2A4-5AAC-A3FA-C30C-9E4DAF0F8E7C}.Debug|x64.Build.0 = Debug|x64
+		{6EC8E2A4-5AAC-A3FA-C30C-9E4DAF0F8E7C}.Release|x64.ActiveCfg = Release|x64
+		{6EC8E2A4-5AAC-A3FA-C30C-9E4DAF0F8E7C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {27D1D126-90D6-4957-96AF-02F27017B27C}
 	EndGlobalSection
 EndGlobal
