@@ -4,4 +4,5 @@
 void main() {
 	Log::Init();
 	ScriptingEngine::Init();
+	ScriptingEngine::Shutdown();
 }

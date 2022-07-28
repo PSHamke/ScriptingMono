@@ -1,10 +1,11 @@
 #include "ScriptingEngine.h"
-#include "mono/jit/jit.h"
-#include "mono/metadata/assembly.h"
 #include "Log.h"
 #include "Core.h"
 #include <fstream>
 
+#include "mono/jit/jit.h"
+#include "mono/metadata/assembly.h"
+#include "mono/metadata/object.h"
 struct ScriptEngineData {
 	MonoDomain* RootDomain = nullptr;
 	MonoDomain* AppDomain = nullptr;
@@ -22,6 +23,7 @@ void ScriptingEngine::Init()
 
 void ScriptingEngine::Shutdown()
 {
+	ShutdownMono();
 	delete s_Data;
 }
 
@@ -98,9 +100,48 @@ void ScriptingEngine::InitMono()
 		PrintAssemblyTypes(s_Data->CoreAssembly);
 	else
 		RS_CORE_TRACE("Cannot read asm");
+
+	MonoImage* assemblyImage = mono_assembly_get_image(s_Data->CoreAssembly);
+	MonoClass* monoClass = mono_class_from_name(assemblyImage, "TestingScript", "Main");
+	// Object Creation .. Calling constructor
+	MonoObject* instance = mono_object_new(s_Data->AppDomain, monoClass);
+	mono_runtime_object_init(instance);
+
+	// Calling Method
+	MonoMethod* printMessageFunc = mono_class_get_method_from_name(monoClass, "PrintMessage", 0);
+	mono_runtime_invoke(printMessageFunc, instance, nullptr, nullptr);
+
+	// Calling Method with param
+		
+	// 1 parameter 
+	MonoMethod* printIntFunc = mono_class_get_method_from_name(monoClass, "PrintInt", 1);
+
+	int value = 7;
+	void* param = &value;
+	mono_runtime_invoke(printIntFunc, instance, &param, nullptr);
+
+	// Multiple Parameters
+	MonoMethod* printIntsFunc = mono_class_get_method_from_name(monoClass, "PrintInts", 2);
+	int value1 = 2;
+	int value2 = 5;
+	void* params[2] = {
+		&value1, &value2
+	};
+
+	mono_runtime_invoke(printIntsFunc, instance, params, nullptr);
+
+	// String as a parameter
+	MonoString* monoString = mono_string_new(s_Data->AppDomain, "Hello World From C++!");
+	MonoMethod* printCustomMessageFunc = mono_class_get_method_from_name(monoClass, "PrintCustomMessage", 1);
+	void* stringParam = monoString;
+	mono_runtime_invoke(printCustomMessageFunc, instance, &stringParam, nullptr);
 }
 
 void ScriptingEngine::ShutdownMono()
 {
-
+	// Unloading issues
+	//mono_domain_unload(s_Data->AppDomain);
+	s_Data->AppDomain = nullptr;
+	//mono_jit_cleanup(s_Data->RootDomain);
+	s_Data->RootDomain = nullptr;
 }

@@ -80,8 +80,8 @@ workspace "ScriptingMono"
         kind "SharedLib"
         language "C#"
         dotnetframework "4.7.2"
-        targetdir ("%{wks.location}/Resources/Scripts")
-        objdir ("%{wks.location}/Resources/Scripts-int")
+        targetdir ("%{wks.location}/ScriptingMono/Resources/Scripts")
+        objdir ("%{wks.location}/ScriptingMono/Resources/Scripts-int")
 
         files 
         {

@@ -18,8 +18,8 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <Optimize>false</Optimize>
-    <OutputPath>..\Resources\Scripts\</OutputPath>
-    <BaseIntermediateOutputPath>..\Resources\Scripts-int\Debug\</BaseIntermediateOutputPath>
+    <OutputPath>..\ScriptingMono\Resources\Scripts\</OutputPath>
+    <BaseIntermediateOutputPath>..\ScriptingMono\Resources\Scripts-int\Debug\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -30,8 +30,8 @@
     <DebugType>portable</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <Optimize>true</Optimize>
-    <OutputPath>..\Resources\Scripts\</OutputPath>
-    <BaseIntermediateOutputPath>..\Resources\Scripts-int\Release\</BaseIntermediateOutputPath>
+    <OutputPath>..\ScriptingMono\Resources\Scripts\</OutputPath>
+    <BaseIntermediateOutputPath>..\ScriptingMono\Resources\Scripts-int\Release\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants></DefineConstants>
     <ErrorReport>prompt</ErrorReport>
