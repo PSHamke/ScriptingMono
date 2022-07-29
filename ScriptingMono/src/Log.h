@@ -35,7 +35,7 @@ private:
 #define  RS_ENABLE_ASSERTS
 
 #ifdef RS_ENABLE_ASSERTS
-#define RS_CORE_ASSERT(x, ...) {if(!(x)) {RS_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
+#define RS_CORE_ASSERT(x) {if(!(x)) {RS_CORE_ERROR("{0}() Line: {1} | Assertion Failed: {2}",__FUNCTION__, __LINE__,#x); __debugbreak();}}
 #else 
-#define RS_CORE_ASSERT(x, ...)
+#define RS_CORE_ASSERT(x)
 #endif

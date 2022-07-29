@@ -11,6 +11,7 @@
     <ClInclude Include="src\Scripting\ScriptingEngine.h">
       <Filter>Scripting</Filter>
     </ClInclude>
+    <ClInclude Include="src\Scripting\ScriptGlue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Log.cpp" />
@@ -18,5 +19,6 @@
       <Filter>Scripting</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Scripting\ScriptGlue.cpp" />
   </ItemGroup>
 </Project>

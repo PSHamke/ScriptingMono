@@ -3,6 +3,6 @@
 #include "Scripting/ScriptingEngine.h"
 void main() {
 	Log::Init();
-	ScriptingEngine::Init();
-	ScriptingEngine::Shutdown();
+	ScriptingMono::ScriptingEngine::Init();
+	ScriptingMono::ScriptingEngine::Shutdown();
 }

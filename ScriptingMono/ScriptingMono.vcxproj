@@ -98,6 +98,7 @@
     <ClInclude Include="src\Core.h" />
     <ClInclude Include="src\Log.h" />
     <ClInclude Include="src\Scripting\ScriptingEngine.h" />
+    <ClInclude Include="src\Scripting\ScriptGlue.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Log.cpp">
@@ -112,6 +113,7 @@
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
+    <ClCompile Include="src\Scripting\ScriptGlue.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
